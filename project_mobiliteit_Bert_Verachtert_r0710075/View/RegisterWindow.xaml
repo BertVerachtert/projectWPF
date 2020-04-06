@@ -1,0 +1,40 @@
+﻿<Window x:Class="project_mobiliteit_Bert_Verachtert_r0710075.View.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:project_mobiliteit_Bert_Verachtert_r0710075.View"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        DataContext="{Binding RegisterViewModel, Source={StaticResource Locator}}"
+        Title="" Height="570" Width="550">
+    <Grid Background="#f7be92">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Registreren" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"></TextBlock>
+        <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="17" FontWeight="Bold">Voornaam</Label>
+        <TextBox Text="{Binding Voornaam}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="15"/>
+        <Label Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="17" FontWeight="Bold">Naam</Label>
+        <TextBox Text="{Binding Naam}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="15"/>
+        <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="17" FontWeight="Bold">Email</Label>
+        <TextBox Text="{Binding Email,Mode=TwoWay}" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" FontSize="15"/>
+        <Label Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="17" FontWeight="Bold">Wachtwoord</Label>
+        <TextBox Text="{Binding Wachtwoord,Mode=TwoWay}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="210" FontSize="15"/>
+        <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="17" FontWeight="Bold">Straat</Label>
+        <TextBox Text="{Binding Straat,Mode=TwoWay}" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" FontSize="15"/>
+        <Label Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="17" FontWeight="Bold">Nummer</Label>
+        <TextBox Text="{Binding Huisnummer,Mode=TwoWay}" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="35" FontSize="15"/>
+        <Label Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="17" FontWeight="Bold">Gemeente</Label>
+        <TextBox Text="{Binding Gemeente,Mode=TwoWay}" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" FontSize="15"/>
+        <Button Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Height="45" Background="#c3dbf7" Foreground="Black" Command="{Binding InsertGebruikerCommand}">Registreren</Button>
+    </Grid>
+</Window>
